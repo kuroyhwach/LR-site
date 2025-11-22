@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>404</title>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #22222d, #2a2a3e);
+        font-family: "Segoe UI", sans-serif;
+        color: #fff;
+        overflow: hidden;
+    }
+
+    .container {
+        text-align: center;
+        animation: fadeIn 1s ease;
+        position: relative;
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 120px;
+        margin: 0;
+        font-weight: 700;
+        letter-spacing: 5px;
+        animation: float 3s ease-in-out infinite;
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+    }
+
+    p {
+        font-size: 22px;
+        margin: 10px 0 30px;
+        opacity: 0.9;
+    }
+
+    a.button {
+        display: inline-block;
+        padding: 14px 32px;
+        background: #ffb347;
+        color: #1e1e2f;
+        font-size: 18px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+        box-shadow: 0 0 15px rgba(255, 179, 71, 0.6);
+    }
+
+    a.button:hover {
+        background: #ffcc66;
+        transform: scale(1.06);
+        box-shadow: 0 0 20px rgba(255, 204, 102, 0.8);
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-15px); }
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    .glow-circle {
+        position: absolute;
+        width: 350px;
+        height: 350px;
+        background: radial-gradient(circle, rgba(255,255,255,0.15), rgba(255,255,255,0));
+        border-radius: 50%;
+        top: -100px;
+        left: -100px;
+        animation: rotate 10s linear infinite;
+    }
+
+    .glow-circle.second {
+        width: 450px;
+        height: 450px;
+        bottom: -150px;
+        right: -150px;
+        left: auto;
+        top: auto;
+        animation: rotate 12s linear reverse infinite;
+    }
+
+    @keyframes rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+</style>
+</head>
+<body>
+    <div class="glow-circle"></div>
+    <div class="glow-circle second"></div>
+
+    <div class="container">
+        <h1>404</h1>
+        <p>Упс... Эта страница куда‑то пропала.</p>
+        <a class="button" href="index.html">Вернуться на главную</a>
+    </div>
+</body>
+</html>
