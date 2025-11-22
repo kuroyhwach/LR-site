@@ -1,0 +1,121 @@
+.specialists{
+    width: 100%;
+    background-color: #F9F9F9;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin: 0 auto;
+    .container{
+        position: relative;
+        max-width: 1283px;
+    }
+    &__content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 80px;
+        padding-bottom: 78px;
+    }
+    &__info{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 12px;
+    }
+    &__subtitle{
+        letter-spacing: -0.2px;
+        margin-bottom: 20px;
+        color: $disabled-gray;
+        @include Font(Montserrat, 100, 16px, serif);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    &__title{
+        @include Font(Alice, 500, 38px, serif);
+        color: $text-dark;
+        margin: 0;
+        line-height: 1.35;
+        letter-spacing: 0.5px;
+        margin-bottom: 29px;
+        text-transform: uppercase;
+        span{
+        color: $dark-yellow;
+        }
+  }
+  &__text{
+    @include Font(Montserrat, 400, 16px, sans-serif);
+    line-height: 1.5;
+    letter-spacing: -0.46px;
+    color: $text-dark;
+    max-width: 480px;
+    margin: 0;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  &__persons{
+    display: grid;
+    grid-template-columns: repeat(3, 229px);
+    align-items: start;
+    gap: 20px;
+    width: 727px;
+    max-height: 383px;
+    position: relative;
+    &-item{
+        margin: 0;
+        position: relative;
+        max-width: 229px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-height: 383px;
+        gap: 16px;
+        &-image {
+            width: 229px;
+            padding-top: 136.2%;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            background-color: $dark-yellow;
+      }
+        &-name-kiril, &-name-lubov, &-name-ivan{
+            @include Font(Alice, 400, 16px, sans-serif);
+            color: $text-dark;
+            text-transform: uppercase;
+            margin: 0;
+            line-height: 1.5;
+        }
+        &-age-kiril, &-age-lubov, &-age-ivan{
+           @include Font(Montserrat, 400, 14px, sans-serif);
+           color: $disabled-gray;
+           margin: 0;
+           letter-spacing: -0.5px;
+        }
+        &-name-kiril{
+            margin-top: -6px;
+        }
+        &-age-kiril{
+            margin-top: -16px;
+        }
+        &-name-lubov{
+            margin-top: -4px;
+        }
+        &-age-lubov{
+            margin-top: -6px;
+            margin-bottom: 9px;
+        }
+        &-name-ivan{
+            transform: translateY(6px);
+        }
+    }
+    .kiril .specialists__persons-item-image {
+      background-image: url("/img/кирил.png");
+    }
+    .lubov .specialists__persons-item-image {
+      background-image: url("/img/любовь.png");
+    }
+    .ivan .specialists__persons-item-image {
+      background-image: url("/img/иван.png");
+    }
+  }
+}
+

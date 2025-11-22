@@ -1,0 +1,102 @@
+.advantages{
+    width: 100%;
+    background-image: url(/img/Картинка\ фон.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-attachment: scroll;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin: 0 auto;
+    .container{
+        position: relative;
+        max-width: 1296px;
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 81px;
+        padding-bottom: 80px;
+        button{
+            margin-left: -1px;
+            padding-right: 26px;
+            padding-left: 22px;
+            line-height: 18px;
+            width: 200px;
+        }
+    }
+    &__subtitle{
+        @include Font(Montserrat, 200, 16px, sans-serif);
+        color: $disabled-gray;
+        margin: 0;
+        margin-right: -8px;
+        margin-bottom: 24px;
+        letter-spacing: -0.5px;
+    }
+    &__title{
+        @include Font(Alice, 500, 40px, serif);
+        color: $text-dark;
+        margin: 0;
+        margin-bottom: 51px;
+        letter-spacing: -0.8px;
+        text-transform: uppercase;
+        span{
+            color: $dark-yellow;
+        }
+    }
+    &__stats{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px;
+        align-items: flex-start;
+        margin-bottom: 58px;
+        &-item{
+            border: 1px solid $disabled-gray;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 32px 24px 28px 24px;
+            max-width: 306px;
+            max-height: 223px;
+            width: 256px;
+            img{
+                margin-bottom: 23px;
+            }
+            &-big{
+                text-transform: uppercase;
+                @include Font(Alice, 400, 16px, serif);
+                color: $text-dark;
+                margin: 0;
+                margin-bottom: 12px;
+            }
+            &-small{
+                @include Font(Montserrat, 300, 14px, serif);
+                color: $text-dark;
+                margin: 0;
+                line-height: 20px;
+                letter-spacing: -0.4px;
+            }
+        }
+        &-item:hover{
+            box-shadow: 0 0 10px $light-yellow;
+            transition: all 0.5s ease-in-out;
+        }
+        &-item:nth-of-type(1)
+        {
+            img{
+                margin-bottom: 8px;
+            }
+            .advantages__stats-item-big{
+                margin-bottom: 19px;
+                line-height: 24px
+            }
+            .advantages__stats-item-small{
+                letter-spacing: -0.5px;
+                margin-bottom: 18.4px;
+            }
+        }
+    }
+}
